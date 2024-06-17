@@ -136,16 +136,17 @@ const SignUpSignIn = () => {
                 />
               </div>
 
-              <button
+              <button type="button"
                 disabled={loading}
                 className="btn"
                 onClick={signInWithEmail}
               >
+                
                 {loading ? "Loading..." : " Log In with Email and Password"}
               </button>
             </form>
             <p style={{ textAlign: "center", margin: 0 }}>or</p>
-            <button
+            <button type="button"
               disabled={loading}
               className="btn btn-blue"
               onClick={signInWithGoogle}
@@ -160,6 +161,7 @@ const SignUpSignIn = () => {
                 marginTop: "0.5rem",
                 cursor: "pointer",
               }}
+              onKeyPress={handleKeyPress}
             >
               Or Don't Have An Account? Click Here.
             </p>
@@ -214,7 +216,7 @@ const SignUpSignIn = () => {
               </button>
             </form>
             <p style={{ textAlign: "center", margin: 0 }}>or</p>
-            <button
+            <button type="button"
               disabled={loading}
               className="btn btn-blue"
               onClick={signInWithGoogle}
@@ -229,6 +231,7 @@ const SignUpSignIn = () => {
                 marginTop: "0.5rem",
                 cursor: "pointer",
               }}
+              onKeyPress={handleKeyPress}
             >
               Or Have An Account Already? Click Here
             </p>
