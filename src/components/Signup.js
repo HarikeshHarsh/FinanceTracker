@@ -137,15 +137,18 @@ const SignUpSignIn = () => {
               </div>
 
               <button
+              type="button"
                 disabled={loading}
                 className="btn"
                 onClick={signInWithEmail}
+                
               >
                 {loading ? "Loading..." : " Log In with Email and Password"}
               </button>
             </form>
             <p style={{ textAlign: "center", margin: 0 }}>or</p>
             <button
+            type="button"
               disabled={loading}
               className="btn btn-blue"
               onClick={signInWithGoogle}
@@ -160,6 +163,7 @@ const SignUpSignIn = () => {
                 marginTop: "0.5rem",
                 cursor: "pointer",
               }}
+              onKeyUp={handleKeyUp}
             >
               Or Don't Have An Account? Click Here.
             </p>
@@ -215,9 +219,11 @@ const SignUpSignIn = () => {
             </form>
             <p style={{ textAlign: "center", margin: 0 }}>or</p>
             <button
+            type="button"
               disabled={loading}
               className="btn btn-blue"
               onClick={signInWithGoogle}
+              
             >
               {loading ? "Loading..." : "Sign Up with Google"}
             </button>
@@ -229,6 +235,7 @@ const SignUpSignIn = () => {
                 marginTop: "0.5rem",
                 cursor: "pointer",
               }}
+              onKeyDown={handleKeyDown}
             >
               Or Have An Account Already? Click Here
             </p>
